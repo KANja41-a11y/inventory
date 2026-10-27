@@ -1,0 +1,18 @@
+{
+  "profile": {
+    "game": "Seoul Quest",
+    "player": "Player One",
+    "avatar": ""
+  },
+  "items": [
+    { "id": "i1", "icon": "🍓", "name": "Strawberry Milk", "qty": 5, "rarity": "Common", "note": "Pulihkan 20 HP di Han River." },
+    { "id": "i2", "icon": "🎟️", "name": "Subway Pass", "qty": 2, "rarity": "Rare", "note": "Teleport antar stasiun Seoul." },
+    { "id": "i3", "icon": "🌸", "name": "Cherry Blossom Charm", "qty": 1, "rarity": "Epic", "note": "Luck +15 saat musim semi." },
+    { "id": "i4", "icon": "🗼", "name": "N Seoul Tower Key", "qty": 1, "rarity": "Legendary", "note": "Membuka puncak menara." }
+  ],
+  "letter": {
+    "title": "Untuk kamu",
+    "body": "Terima kasih sudah ada di perjalanan ini. Ada satu hal kecil yang ingin kubagikan. Tekan putar, ya.",
+    "from": "— aku"
+  }
+}

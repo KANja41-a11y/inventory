@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game Inventory · Seoul</title>
+<meta name="description" content="Inventory game bertema Seoul.">
+<!-- OG IMAGE: ganti link di bawah dengan link gambar game kamu -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Game Inventory · Seoul">
+<meta property="og:description" content="Inventory game bertema Seoul.">
+<meta property="og:image" content="https://GANTI-DENGAN-LINK-OG-IMAGE.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://GANTI-DENGAN-LINK-OG-IMAGE.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <svg class="skyline" viewBox="0 0 800 140" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path d="M0 140V110h40V90h30v20h30V70h25v40h35V95h40v15h30V80h20v30h50V60h6V30h4V10h2V30h4V60h6v50h40V85h30v25h45V100h35v10h40V75h25v35h30V95h40v45z"/>
+  </svg>
+  <div class="profile">
+    <img id="avatar" class="avatar" alt="Profil game">
+    <div class="who">
+      <p class="kr">서울</p>
+      <h1 id="gameName">Game</h1>
+      <p id="playerName" class="player"></p>
+    </div>
+    <button class="btn ghost" id="editProfile">Edit profil</button>
+  </div>
+</header>
+
+<main>
+  <div class="bar">
+    <input id="search" type="search" placeholder="Cari item…" aria-label="Cari item">
+    <span id="count" class="count"></span>
+    <button class="btn ghost" id="saveBtn">Simpan</button>
+    <button class="btn" id="addBtn">+ Tambah item</button>
+  </div>
+  <section id="grid" class="grid" aria-live="polite"></section>
+
+  <section class="surprise">
+    <button class="envelope" id="envelope" aria-expanded="false">
+      <span class="flap"></span>
+      <span class="paper">
+        <strong id="letterTitle"></strong>
+        <span id="letterBody"></span>
+        <em id="letterFrom"></em>
+      </span>
+      <span class="pocket">Buka surat</span>
+    </button>
+    <div class="video-wrap" id="videoWrap">
+      <video id="video" src="assets/video.mp4" controls playsinline preload="metadata"></video>
+    </div>
+  </section>
+</main>
+
+<dialog id="itemDlg">
+  <form method="dialog" id="itemForm">
+    <h2 id="itemTitle">Item</h2>
+    <label>Ikon (emoji)<input name="icon" maxlength="4" value="🎁" required></label>
+    <label>Nama<input name="name" maxlength="40" required></label>
+    <div class="row">
+      <label>Jumlah<input name="qty" type="number" min="1" value="1" required></label>
+      <label>Rarity
+        <select name="rarity"><option>Common</option><option>Rare</option><option>Epic</option><option>Legendary</option></select>
+      </label>
+    </div>
+    <label>Catatan<input name="note" maxlength="80"></label>
+    <div class="actions">
+      <button type="button" class="btn ghost" data-close>Batal</button>
+      <button class="btn" value="ok">Simpan item</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="profileDlg">
+  <form method="dialog" id="profileForm">
+    <h2>Profil game</h2>
+    <label>Nama game<input name="game" maxlength="30" required></label>
+    <label>Nama pemain<input name="player" maxlength="30"></label>
+    <label>Foto profil (upload)<input type="file" id="avatarFile" accept="image/*"></label>
+    <label>atau link foto<input name="avatar" type="url" placeholder="https://…"></label>
+    <div class="actions">
+      <button type="button" class="btn ghost" data-close>Batal</button>
+      <button class="btn" value="ok">Simpan profil</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="delDlg">
+  <form method="dialog">
+    <h2>Hapus item?</h2>
+    <p id="delText"></p>
+    <div class="actions">
+      <button type="button" class="btn ghost" data-close>Batal</button>
+      <button class="btn danger" value="ok">Hapus selamanya</button>
+    </div>
+  </form>
+</dialog>
+
+<div id="toast" class="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
