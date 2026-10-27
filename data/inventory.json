@@ -5,10 +5,9 @@
     "avatar": ""
   },
   "items": [
-    { "id": "i1", "icon": "🍓", "name": "Strawberry Milk", "qty": 5, "rarity": "Common", "note": "Pulihkan 20 HP di Han River." },
-    { "id": "i2", "icon": "🎟️", "name": "Subway Pass", "qty": 2, "rarity": "Rare", "note": "Teleport antar stasiun Seoul." },
-    { "id": "i3", "icon": "🌸", "name": "Cherry Blossom Charm", "qty": 1, "rarity": "Epic", "note": "Luck +15 saat musim semi." },
-    { "id": "i4", "icon": "🗼", "name": "N Seoul Tower Key", "qty": 1, "rarity": "Legendary", "note": "Membuka puncak menara." }
+    { "id": "m1", "name": "Hongdae Street", "link": "https://example.com/hongdae", "photo": "" },
+    { "id": "m2", "name": "Han River Park", "link": "https://example.com/han-river", "photo": "" },
+    { "id": "m3", "name": "N Seoul Tower", "link": "https://example.com/n-seoul-tower", "photo": "" }
   ],
   "letter": {
     "title": "Untuk kamu",
