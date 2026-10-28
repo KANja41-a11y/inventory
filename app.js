@@ -182,4 +182,16 @@ $("#addBtn").onclick = () => openItem();
 $("#saveBtn").onclick = () => save();
 $("#search").oninput = renderItems;
 
+// BAGIKAN: salin link halaman ini
+$("#shareBtn").onclick = () => {
+  $("#shareUrl").value = location.href; $("#copyBtn").textContent = "Salin";
+  $("#shareDlg").showModal(); $("#shareUrl").select();
+};
+$("#copyBtn").onclick = async () => {
+  const b = $("#copyBtn"), i = $("#shareUrl"); let ok = false;
+  try { await navigator.clipboard.writeText(i.value); ok = true; }
+  catch { i.select(); try { ok = document.execCommand("copy"); } catch {} }
+  b.textContent = ok ? "Tersalin ✓" : "Tekan lama link";
+};
+
 (async () => { state = await load(); renderProfile(); renderLetter(); renderItems(); })();

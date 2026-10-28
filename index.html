@@ -33,6 +33,7 @@
       <p id="playerName" class="player"></p>
     </div>
     <button class="btn ghost" id="editProfile">Edit profil</button>
+    <button class="btn ghost" id="shareBtn">Bagikan</button>
   </div>
 </header>
 
@@ -101,6 +102,18 @@
       <button type="button" class="btn ghost" data-close>Batal</button>
       <button class="btn danger" value="ok">Hapus selamanya</button>
     </div>
+  </form>
+</dialog>
+
+<dialog id="shareDlg">
+  <form method="dialog">
+    <h2>Bagikan website</h2>
+    <div class="sharebox">
+      <input id="shareUrl" readonly aria-label="Link website">
+      <button type="button" class="btn" id="copyBtn">Salin</button>
+    </div>
+    <p class="hint">Kirim link ini ke temanmu supaya mereka bisa melihat game kamu.</p>
+    <div class="actions"><button type="button" class="btn ghost" data-close>Tutup</button></div>
   </form>
 </dialog>
 
